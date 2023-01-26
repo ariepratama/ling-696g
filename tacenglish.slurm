@@ -8,7 +8,7 @@
 #SBATCH --nodes=1
 #SBATCH --mem-per-cpu=6gb
 #SBATCH --gres=gpu:1
-#SBATCH --time=90:00:00
+#SBATCH --time=10:00:00
 
 IMAGE=/home/u26/ariesutiono/coqui-tts.sif
 echo "starting"

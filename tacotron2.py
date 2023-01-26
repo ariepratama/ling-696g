@@ -50,7 +50,7 @@ config = Tacotron2Config(
     r=2,
     attention_type="dynamic_convolution",
     double_decoder_consistency=True,
-    epochs=50,
+    epochs=2,
     text_cleaner="phoneme_cleaners",
     use_phonemes=True,
     phoneme_language="en-us",
@@ -80,10 +80,12 @@ train_samples,eval_samples = load_tts_samples(
    eval_split_size=config.eval_split_size,
 )
 
+print("defining Tacotron2 model...")
 #init model
 model = Tacotron2(config,ap,tokenizer)
 
 #init trainer
+print("initialize Tacotron2 model...")
 trainer = Trainer(
     TrainerArgs(),
     config,
@@ -94,4 +96,6 @@ trainer = Trainer(
     training_assets={"audio_processor": ap},
 )
 
+
+print("training Tacotron2 model...")
 trainer.fit()
