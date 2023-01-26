@@ -13,5 +13,5 @@
 IMAGE=/home/u26/ariesutiono/coqui-tts.sif
 echo "starting"
 SINGULARITYENV_CUDA_VISIBLE_DEVICES=0 singularity exec \
-        --nv $IMAGE python3 /home/u26/ariesutiono/TTS/tacotron2.py
+        --nv $IMAGE python3 /home/u26/ariesutiono/TTS/tacenglish.py
 echo "finished"
