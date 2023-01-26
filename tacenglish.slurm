@@ -4,7 +4,7 @@
 #SBATCH --output=%x-%j.out
 #SBATCH --account=clu-ling
 #SBATCH --partition=standard
-#SBATCH --ntasks=28
+#SBATCH --ntasks=2
 #SBATCH --nodes=1
 #SBATCH --mem-per-cpu=6gb
 #SBATCH --gres=gpu:1
