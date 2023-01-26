@@ -11,7 +11,7 @@
 #SBATCH --time=01:00:00
 #SBATCH --output=buildimage-arie.log
 DOCKER_IMAGE="hammond3/coqui-tts:latest"
-OUTPUT=/home/ariesutiono/coqui-tts.sif
+OUTPUT=/home/u26/ariesutiono/coqui-tts.sif
 echo Starting
 singularity build $OUTPUT docker://$DOCKER_IMAGE
 echo "Job ended: $(date)"
