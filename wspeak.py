@@ -5,7 +5,7 @@
 #create a new metadata file with only files
 #from the speaker with the most recordings.
 
-val = '/data/cv-corpus-7.0-2021-07-21/cy/validated.tsv'
+val = '/Users/arie/Downloads/cv-corpus-12.0-2022-12-07/nl/validated.tsv'
 
 f = open(val,'r')
 t = f.read()
