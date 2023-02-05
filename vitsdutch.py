@@ -48,21 +48,21 @@ config = VitsConfig(
     num_eval_loader_workers=4,
     run_eval=True,
     test_delay_epochs=-1,
-    ga_alpha=5.0,
+    # ga_alpha=5.0,
     #added below
-    decoder_loss_alpha=0.25,
-    postnet_loss_alpha=0.25,
-    postnet_diff_spec_alpha=0,
-    decoder_diff_spec_alpha=0,
-    decoder_ssim_alpha=0,
-    postnet_ssim_alpha=0,
+    # decoder_loss_alpha=0.25,
+    # postnet_loss_alpha=0.25,
+    # postnet_diff_spec_alpha=0,
+    # decoder_diff_spec_alpha=0,
+    # decoder_ssim_alpha=0,
+    # postnet_ssim_alpha=0,
     #added above
     r=2,
-    attention_type="dynamic_convolution",
-    double_decoder_consistency=True,
+    # attention_type="dynamic_convolution",
+    # double_decoder_consistency=True,
     epochs=2,
     # text_cleaner="phoneme_cleaners",
-    text_cleaner="basic_cleaners",
+    # text_cleaner="basic_cleaners",
     # use_phonemes=True,
     use_phonemes=False,
     # phoneme_language="en-us",
@@ -95,12 +95,12 @@ train_samples,eval_samples = load_tts_samples(
 )
 
 # init model
-print("[Tacdutch] defining Tacotron2 model...")
+print("[Vitsdutch] defining Tacotron2 model...")
 #model = Tacotron2(config)
 model = Vits(config,ap,tokenizer)
 
 # init the trainer and 🚀
-print("[Tacdutch] initialize Tacotron2 model...")
+print("[Vitsdutch] initialize Tacotron2 model...")
 trainer = Trainer(
     #TrainingArgs(),
     TrainerArgs(),
@@ -111,6 +111,6 @@ trainer = Trainer(
     eval_samples=eval_samples,
     training_assets={"audio_processor": ap},
 )
-print("[Tacdutch] training Tacotron2 model...")
+print("[Vitsdutch] training Tacotron2 model...")
 trainer.fit()
 
