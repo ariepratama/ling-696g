@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sbatch \
-  --job-name=tacdutch-arie \
+  --job-name=vitsdutch-arie \
   --time="50:00:00" \
   --partition=standard \
   --account=clu-ling \
@@ -12,4 +12,4 @@ sbatch \
   --cpus-per-task=1 \
   --gres=gpu:1 \
   --mem=8GB \
-  tacdutch.sh
+  vitsdutch.sh
