@@ -16,7 +16,7 @@ train_log: !ref <output_folder>/train_log.txt
 wav2vec2_hub: facebook/wav2vec2-base
 
 # Data files
-data_folder: /Users/arie/Downloads/cv-corpus-12.0-2022-12-07/commonspeechidonespeaker  # e.g, /localscratch/cv-corpus-5.1-2020-06-22/fr
+data_folder: /home/u26/ariesutiono/commonspeechidonespeaker  # e.g, /localscratch/cv-corpus-5.1-2020-06-22/fr
 train_tsv_file: !ref <data_folder>/train.tsv  # Standard CommonVoice .tsv files
 dev_tsv_file: !ref <data_folder>/dev.tsv  # Standard CommonVoice .tsv files
 test_tsv_file: !ref <data_folder>/test.tsv  # Standard CommonVoice .tsv files
