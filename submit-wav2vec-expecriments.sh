@@ -12,7 +12,7 @@ sbatch \
   --cpus-per-task=1 \
   --gres=gpu:1 \
   --mem=8GB \
-  train_id_wav2vec_experiments.sh hparams/stt_experiments/train_id_with_wav2vec_40.yaml
+  train_id_wav2vec_experiments.sh hparams/stt_experiments/train_id_with_wav2vec_50.yaml
 
 sbatch \
   --job-name=wav2vec-arie \
@@ -26,7 +26,7 @@ sbatch \
   --cpus-per-task=1 \
   --gres=gpu:1 \
   --mem=8GB \
-  train_id_wav2vec_experiments.sh hparams/stt_experiments/train_id_with_wav2vec_41.yaml
+  train_id_wav2vec_experiments.sh hparams/stt_experiments/train_id_with_wav2vec_51.yaml
 
 
 sbatch \
