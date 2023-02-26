@@ -65,7 +65,7 @@ freeze_wav2vec: False
 dropout: 0.15
 
 # Outputs
-output_neurons: 40  # BPE size, index(blank/eos/bos) = 0
+output_neurons: !ref <dnn_neurons>  # BPE size, index(blank/eos/bos) = 0
 
 # Decoding parameters
 # Be sure that the bos and eos index match with the BPEs ones
