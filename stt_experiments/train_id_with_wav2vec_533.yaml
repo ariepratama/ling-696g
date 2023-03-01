@@ -86,9 +86,9 @@ epoch_counter: !new:speechbrain.utils.epoch_loop.EpochCounterWithStopper
     direction: min
 
 augmentation: !new:speechbrain.lobes.augment.SpecAugment
-    freq_mask: True
+    freq_mask: False
     time_warp: False
-    time_mask: False
+    time_mask: True
 
 enc: !new:speechbrain.nnet.containers.Sequential
     input_shape: [null, null, !ref <wav2vec_output_dim>]
